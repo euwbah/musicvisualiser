@@ -37,10 +37,10 @@ function mousePressed() {
     if (!synth.isPlaying()) {
         synth.play(1);
         rhodes.play(1);
-        song.play(0.75);
+        song.play(1);
     } else {
         let time = map(mouseX, 100, width - 100, 0, song.duration(), true);
-        song.jump(time - 0.25);
+        song.jump(time);
         synth.jump(time);
         rhodes.jump(time);
         print(`jumped to ${time} / ${song.duration()}`);
